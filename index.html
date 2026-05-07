@@ -19,11 +19,10 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        /* Header */
         .header {
             background: white;
             border-radius: 20px;
@@ -61,15 +60,15 @@
             margin-top: 15px;
         }
 
-        /* Painel de links */
-        .links-panel {
+        .card {
             background: white;
             border-radius: 20px;
             padding: 25px;
+            margin-bottom: 25px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
 
-        .section-title {
+        .card-title {
             font-size: 1.2rem;
             color: #333;
             margin-bottom: 20px;
@@ -134,12 +133,68 @@
             font-weight: 600;
         }
 
-        /* Footer */
-        .footer {
+        .delivery-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-left: 4px solid #4caf50;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .delivery-box h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .delivery-box ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .delivery-box li {
+            margin: 10px 0;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
             text-align: center;
-            margin-top: 30px;
-            color: #888;
-            font-size: 0.75rem;
+            line-height: 24px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn-submit {
+            display: inline-block;
+            background: linear-gradient(135deg, #4caf50, #2e7d32);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(76,175,80,0.4);
+        }
+
+        .github-note {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 0.85rem;
         }
 
         hr {
@@ -148,7 +203,14 @@
             border-top: 1px solid #e0e0e0;
         }
 
-        @media (max-width: 500px) {
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.75rem;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
             .header h1 {
                 font-size: 1.3rem;
             }
@@ -170,12 +232,11 @@
             <div class="badge">🎯 Material de apoio para estudo</div>
         </div>
 
-        <!-- Links -->
-        <div class="links-panel">
-            <h2 class="section-title">📚 Conteúdo do Tema 02</h2>
+        <!-- Links do Conteúdo -->
+        <div class="card">
+            <h2 class="card-title">📚 Conteúdo do Tema 02</h2>
             
             <div class="links-list">
-                <!-- Tema 2 -->
                 <a href="tema2.html" target="_blank" class="link-item">
                     <div class="link-icon">📖</div>
                     <div class="link-content">
@@ -185,7 +246,6 @@
                     <div class="link-badge">Abrir</div>
                 </a>
 
-                <!-- Download PDF -->
                 <a href="Tema2.pdf" target="_blank" class="link-item">
                     <div class="link-icon">📥</div>
                     <div class="link-content">
@@ -195,7 +255,6 @@
                     <div class="link-badge">Baixar</div>
                 </a>
 
-                <!-- Apoio -->
                 <a href="apoio.html" target="_blank" class="link-item">
                     <div class="link-icon">💡</div>
                     <div class="link-content">
@@ -205,7 +264,6 @@
                     <div class="link-badge">Abrir</div>
                 </a>
 
-                <!-- Desafio -->
                 <a href="tema2_desafio.html" target="_blank" class="link-item">
                     <div class="link-icon">🏆</div>
                     <div class="link-content">
@@ -218,10 +276,9 @@
 
             <hr>
 
-            <h2 class="section-title">🐍 Projeto Anvil</h2>
+            <h2 class="card-title">🐍 Projeto Anvil</h2>
             
             <div class="links-list">
-                <!-- Tutorial Anvil -->
                 <a href="Anvil.pdf" target="_blank" class="link-item">
                     <div class="link-icon">📘</div>
                     <div class="link-content">
@@ -231,7 +288,6 @@
                     <div class="link-badge">Baixar</div>
                 </a>
 
-                <!-- Projeto Anvil -->
                 <a href="Projeto.pdf" target="_blank" class="link-item">
                     <div class="link-icon">🚀</div>
                     <div class="link-content">
@@ -241,14 +297,76 @@
                     <div class="link-badge">Baixar</div>
                 </a>
             </div>
+        </div>
 
-            <hr>
+        <!-- INSTRUÇÕES DE ENTREGA (CORRIGIDAS) -->
+        <div class="delivery-box">
+            <h3>
+                <span>📤</span> COMO ENTREGAR A ATIVIDADE - APS_02
+            </h3>
+            <ul>
+                <li><span class="step-number">1</span> <strong>Complete o Desafio do Tema 2</strong> (acesse o link "Desafio - Tema 2" acima)</li>
+                <li><span class="step-number">2</span> <strong>Capture a tela do resultado final do desafio</strong> (mostrando sua resposta/conclusão)</li>
+                <li><span class="step-number">3</span> <strong>Crie um repositório no GitHub com o nome "APS_02"</strong></li>
+                <li><span class="step-number">4</span> <strong>Envie a captura de tela para o repositório APS_02</strong></li>
+                <li><span class="step-number">5</span> <strong>Publique seu projeto Anvil</strong> (Sistema de Diploma) e <strong>adicione o LINK no arquivo README.md</strong> do repositório</li>
+                <li><span class="step-number">6</span> <strong>Preencha o formulário abaixo com o link do repositório APS_02</strong></li>
+            </ul>
+            
+            <div class="github-note">
+                <strong>📌 Estrutura esperada do seu repositório APS_02:</strong>
+                <pre style="margin-top: 10px; background: #fff; padding: 10px; border-radius: 8px; font-size: 0.8rem;">
+APS_02/
+├── README.md           (contém o link do seu aplicativo Anvil)
+└── captura_desafio.png (sua captura de tela do desafio)
+                </pre>
+                <p style="margin-top: 8px;"><strong>🔗 Exemplo de README.md:</strong></p>
+                <pre style="background: #fff; padding: 10px; border-radius: 8px; font-size: 0.7rem;">
+# APS_02 - Tecnologia e Sistemas de Informação
 
-            <div style="margin-top: 20px; padding: 15px; background: #f0f2ff; border-radius: 12px;">
+## Link do Aplicativo Anvil
+[https://seu-app-anvil.anvil.app](https://seu-app-anvil.anvil.app)
+
+## Captura do Desafio
+![Desafio](captura_desafio.png)
+
+## Descrição
+Sistema de verificação de diploma com base em nota e frequência.
+                </pre>
+            </div>
+            
+            <center>
+                <a href="https://forms.gle/T9QSe3PyEpru3t538" target="_blank" class="btn-submit">
+                    📝 CLIQUE AQUI PARA ENVIAR O LINK DO REPOSITÓRIO
+                </a>
+            </center>
+            
+            <div style="margin-top: 15px; padding: 12px; background: rgba(255,255,255,0.8); border-radius: 10px; font-size: 0.85rem;">
+                <strong>📌 Informações solicitadas no formulário:</strong>
+                <ul style="margin-top: 8px;">
+                    <li>📅 Data da atividade</li>
+                    <li>👤 Nome do aluno</li>
+                    <li>🔗 <strong>Link para o repositório da atividade</strong> (cole o link do seu GitHub APS_02)</li>
+                    <li>💬 Qual foi a dificuldade em relação à atividade?</li>
+                </ul>
+                <p style="margin-top: 8px;"><strong>⚠️ Importante:</strong> O formulário pede o LINK DO REPOSITÓRIO (não o link do Anvil separadamente). O link do Anvil deve estar dentro do README.md do seu repositório.</p>
+            </div>
+        </div>
+
+        <!-- Resumo rápido -->
+        <div class="card">
+            <div style="padding: 10px; background: #f0f2ff; border-radius: 12px;">
                 <p style="font-size: 0.85rem; color: #667eea;">
-                    📌 <strong>Dica:</strong> Todos os links abrem em nova aba. 
-                    Utilize o material de apoio para revisar os conceitos antes de iniciar o desafio e o projeto Anvil.
+                    📌 <strong>Checklist de entrega - APS_02:</strong>
                 </p>
+                <ul style="margin-left: 20px; margin-top: 8px; color: #555; font-size: 0.8rem;">
+                    <li>☐ Desafio do Tema 2 concluído</li>
+                    <li>☐ Captura de tela do desafio salva</li>
+                    <li>☐ Repositório GitHub criado com nome "APS_02"</li>
+                    <li>☐ Captura enviada para o repositório</li>
+                    <li>☐ Projeto Anvil publicado e link adicionado no README.md</li>
+                    <li>☐ Formulário preenchido com o link do repositório</li>
+                </ul>
             </div>
         </div>
 
