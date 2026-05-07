@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMA 02 - Tecnologia e Sistemas de Informação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header h1 span {
+            background: linear-gradient(135deg, #06d6a0, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+        }
+
+        /* Painel de links */
+        .links-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+            display: inline-block;
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .link-item {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .link-item:hover {
+            transform: translateX(5px);
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102,126,234,0.2);
+        }
+
+        .link-icon {
+            font-size: 1.8rem;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .link-content {
+            flex: 1;
+        }
+
+        .link-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .link-description {
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        .link-badge {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.75rem;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 500px) {
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            .link-item {
+                flex-wrap: wrap;
+            }
+            .link-badge {
+                margin-left: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📡 <span>Tecnologia e Sistemas<br>de Informação</span></h1>
+            <p>TEMA 02 - Fundamentos, Arquiteturas e Tecnologias</p>
+            <div class="badge">🎯 Material de apoio para estudo</div>
+        </div>
+
+        <!-- Links -->
+        <div class="links-panel">
+            <h2 class="section-title">📚 Conteúdo do Tema 02</h2>
+            
+            <div class="links-list">
+                <!-- Tema 2 -->
+                <a href="tema2.html" target="_blank" class="link-item">
+                    <div class="link-icon">📖</div>
+                    <div class="link-content">
+                        <div class="link-title">Tema 2 - Tecnologia e Sistemas de Informação</div>
+                        <div class="link-description">Conteúdo completo do tema</div>
+                    </div>
+                    <div class="link-badge">Abrir</div>
+                </a>
+
+                <!-- Download PDF -->
+                <a href="Tema2.pdf" target="_blank" class="link-item">
+                    <div class="link-icon">📥</div>
+                    <div class="link-content">
+                        <div class="link-title">Download - Tema 2</div>
+                        <div class="link-description">Versão em PDF para download</div>
+                    </div>
+                    <div class="link-badge">Baixar</div>
+                </a>
+
+                <!-- Apoio -->
+                <a href="apoio.html" target="_blank" class="link-item">
+                    <div class="link-icon">💡</div>
+                    <div class="link-content">
+                        <div class="link-title">Material de Apoio</div>
+                        <div class="link-description">Resumo interativo e exemplos práticos</div>
+                    </div>
+                    <div class="link-badge">Abrir</div>
+                </a>
+
+                <!-- Desafio -->
+                <a href="tema2_desafio.html" target="_blank" class="link-item">
+                    <div class="link-icon">🏆</div>
+                    <div class="link-content">
+                        <div class="link-title">Desafio - Tema 2</div>
+                        <div class="link-description">Atividade prática para fixação</div>
+                    </div>
+                    <div class="link-badge">Abrir</div>
+                </a>
+            </div>
+
+            <hr>
+
+            <h2 class="section-title">🐍 Projeto Anvil</h2>
+            
+            <div class="links-list">
+                <!-- Tutorial Anvil -->
+                <a href="Anvil.pdf" target="_blank" class="link-item">
+                    <div class="link-icon">📘</div>
+                    <div class="link-content">
+                        <div class="link-title">Tutorial - Criar usuário Anvil</div>
+                        <div class="link-description">Passo a passo para criar sua conta no Anvil</div>
+                    </div>
+                    <div class="link-badge">Baixar</div>
+                </a>
+
+                <!-- Projeto Anvil -->
+                <a href="Projeto.pdf" target="_blank" class="link-item">
+                    <div class="link-icon">🚀</div>
+                    <div class="link-content">
+                        <div class="link-title">Projeto Anvil - Sistema de Diploma</div>
+                        <div class="link-description">Mini projeto: verificar concessão de diploma</div>
+                    </div>
+                    <div class="link-badge">Baixar</div>
+                </a>
+            </div>
+
+            <hr>
+
+            <div style="margin-top: 20px; padding: 15px; background: #f0f2ff; border-radius: 12px;">
+                <p style="font-size: 0.85rem; color: #667eea;">
+                    📌 <strong>Dica:</strong> Todos os links abrem em nova aba. 
+                    Utilize o material de apoio para revisar os conceitos antes de iniciar o desafio e o projeto Anvil.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© TEMA 02 - Tecnologia e Sistemas de Informação | Material para fins educacionais</p>
+        </div>
+    </div>
+
+    <script>
+        // Garantir que todos os links abram em nova aba
+        document.querySelectorAll('a').forEach(link => {
+            if (!link.getAttribute('target')) {
+                link.setAttribute('target', '_blank');
+            }
+        });
+    </script>
+</body>
+</html>
