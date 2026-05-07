@@ -1,0 +1,9 @@
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    """Este código roda quando o botão é clicado"""
+    nome = self.text_box_1.text  # Pega o que foi digitado
+
+    if nome:  # Se o usuário digitou algo
+      self.label_1.text = f"Olá, {nome}! Seja bem-vindo!"
+    else:  # Se deixou em branco
+      self.label_1.text = "Por favor, digite seu nome!"

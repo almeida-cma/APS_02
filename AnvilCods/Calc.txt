@@ -1,0 +1,79 @@
+def button_calcular_click(self, **event_args):
+
+    # =========================
+    # ENTRADA DE DADOS
+    # =========================
+
+    nota1_texto = self.text_box_nota_1.text
+    nota2_texto = self.text_box_nota_2.text
+    nota3_texto = self.text_box_nota_3.text
+
+
+    # =========================
+    # VALIDAÇÃO
+    # =========================
+
+    if nota1_texto == "" or nota2_texto == "" or nota3_texto == "":
+        self.label_resultado.text = "⚠️ Preencha todas as notas!"
+        return
+
+
+    # =========================
+    # CONVERSÃO PARA NÚMERO
+    # =========================
+
+    try:
+        nota1 = float(nota1_texto)
+        nota2 = float(nota2_texto)
+        nota3 = float(nota3_texto)
+
+    except:
+        self.label_resultado.text = "❌ Digite apenas números!"
+        return
+
+
+    # =========================
+    # VALIDAÇÃO DAS NOTAS
+    # =========================
+
+    if nota1 < 0 or nota1 > 10:
+        self.label_resultado.text = "❌ Nota 1 inválida!"
+        return
+
+    if nota2 < 0 or nota2 > 10:
+        self.label_resultado.text = "❌ Nota 2 inválida!"
+        return
+
+    if nota3 < 0 or nota3 > 10:
+        self.label_resultado.text = "❌ Nota 3 inválida!"
+        return
+
+
+    # =========================
+    # PROCESSAMENTO
+    # =========================
+
+    media = (nota1 + nota2 + nota3) / 3
+
+
+    # =========================
+    # REGRA DE NEGÓCIO
+    # =========================
+
+    if media >= 7:
+        situacao = "APROVADO"
+
+    elif media >= 5:
+        situacao = "RECUPERAÇÃO"
+
+    else:
+        situacao = "REPROVADO"
+
+
+    # =========================
+    # SAÍDA
+    # =========================
+
+    self.label_resultado.text = (
+        f"Média: {media:.1f} - {situacao}"
+    )
